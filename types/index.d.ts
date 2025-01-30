@@ -8,41 +8,41 @@ declare type SearchParamProps = {
 
 declare type AccessType = ["room:write"] | ["room:read"] | ["room:presence:write"];
 
-declare type RoomAccesses = Record<string,AccessType>;
+declare type RoomAccesses = Record<string, AccessType>;
 
 declare type UserType = "creator" | "editor" | "viewer";
 
 declare type RoomMetaData = {
-    creatorId:string;
-    email:string;
-    title:string;
+    creatorId: string;
+    email: string;
+    title: string;
 };
 
 declare type CreateDocumentParams = {
-    userId:string;
-    email:string;
+    userId: string;
+    email: string;
 };
 
 declare type User = {
-    id:string;
-    name:string;
-    email:string;
-    avatar:string;
-    color:string;
-    userType?:UserType;
+    id: string;
+    name: string;
+    email: string;
+    avatar: string;
+    color: string;
+    userType?: UserType;
 };
 
 declare type ShareDocumentParams = {
-    roomId:string;
-    email:string;
-    userType:UserType;
-    updatedBy:string;
+    roomId: string;
+    email: string;
+    userType: UserType;
+    updatedBy: string;
 };
 
 declare type UserTypeSelectorParams = {
-    userType:string;
-    setUserType:React.Dispatch<React.SetStateAction<UserType>>;
-    onClickHandler?:(value:string) => void;
+    userType: string;
+    setUserType: React.Dispatch<React.SetStateAction<UserType>>;
+    onClickHandler?: (value: string) => void;
 }
 
 declare type ShareDocumentDialogProps = {
